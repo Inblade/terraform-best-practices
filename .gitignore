@@ -1,0 +1,50 @@
+# Local .terraform directories and plugin cache
+**/.terraform/*
+
+# NOTE: .terraform.lock.hcl is deliberately NOT ignored.
+# The dependency lock file pins provider versions and checksums and MUST be
+# committed so that CI and every engineer resolve identical provider builds.
+# If you see it in a .gitignore, that is a bug, not a preference.
+# Regenerate for extra platforms with:
+#   terraform providers lock -platform=linux_amd64 -platform=darwin_arm64
+
+# State files. These contain resource attributes in plaintext, including
+# secrets. They belong in a remote backend, never in git.
+*.tfstate
+*.tfstate.*
+.terraform.tfstate.lock.info
+
+# Crash logs
+crash.log
+crash.*.log
+
+# Variable files may contain secrets or environment-specific values.
+# Example files are tracked so the interface stays discoverable.
+*.tfvars
+*.tfvars.json
+!*.auto.tfvars.example
+!example.tfvars
+!examples/**/*.tfvars
+!**/*.tfvars.example
+!**/*.tfvars.json.example
+
+# Local CLI overrides that would silently change behaviour for one machine
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# CLI configuration containing credentials or private registry tokens
+.terraformrc
+terraform.rc
+
+# Saved plan files: binary, may embed secrets, and are not portable
+*.tfplan
+plan.out
+plan.json
+
+# Editor and OS noise
+.DS_Store
+.idea/
+.vscode/
+*.swp
